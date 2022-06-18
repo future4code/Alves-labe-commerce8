@@ -26,42 +26,57 @@ class App extends Component {
         image: FogueteTurbo,
       },
       {
-        id: 1,
+        id: 2,
         name: "Foguete espacial ",
         value: 350,
         image: FogueteEpaco,
       },
       {
-        id: 1,
+        id: 3,
         name: "Nave Star wars ",
         value: 500,
         image: NaveStarWars,
       },
       {
-        id: 1,
+        id: 4,
         name: "Falcon Star ",
         value: 620,
         image: FalcaoStar,
       },
       {
-        id: 1,
+        id: 5,
         name: "Foguete Aero ",
         value: 700,
         image: FogueteAero,
       },
       {
-        id: 1,
+        id: 6,
         name: "Foguete Unipolar ",
         value: 750,
         image: FogueteUnipolar,
       },
     ],
-  }; 
+    listaCarrinho: [],
+    contador: 0
+  };
+  adicionarAoCarrinho =(id) => {
+    this.state.listaBrinquedos.map((brinquedos) => {
+      if (brinquedos.id === id) {
+        this.state.listaCarrinho = [brinquedos, ...this.state.listaCarrinho]
+        this.setState({listaCarrinho: this.state.listaCarrinho})
+        brinquedos.contador = brinquedos.contador +1
+      }
+    })
+  } 
   render() {
     return (
       <MainContainer>       
         {/* <Filter/> */}
-        <Product product={this.state.listaBrinquedos}/>
+        <Product 
+        key={this.state.listaBrinquedos.id}
+        product={this.state.listaBrinquedos}
+        onClick={this.adicionarAoCarrinho}
+        />
    <Carrinho />
       </MainContainer>
     );

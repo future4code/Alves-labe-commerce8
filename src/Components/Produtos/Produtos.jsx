@@ -14,10 +14,8 @@ export class Product extends Component {
   };
   mudarOrdem = (event) => {
     this.setState({ ordenar: event.target.value });
-    // if (this.state.ordenar === "CRESCENTE"){
-    //   return
-    // }
   };
+ 
   render() {
     const componentsBrinquedos = this.props.product
       .sort((a, b) => {
@@ -33,8 +31,8 @@ export class Product extends Component {
             <PhotoProduct src={brinquedo.image} />
             <PoductDescription>
               {brinquedo.name}
-              {brinquedo.value}
-              <button>Adicionar ao carrinho</button>
+              R${brinquedo.value}
+              <button onClick={this.props.onClick}>Adicionar ao carrinho</button>
             </PoductDescription>
           </CadaProduto>
         );
