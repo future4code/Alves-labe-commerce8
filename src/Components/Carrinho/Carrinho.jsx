@@ -12,7 +12,7 @@ export class Carrinho extends Component {
     return valorTotal
   }
   render() {
-    return (
+    return (      
       <StyledCarrinho>
         <h1>Carrinho</h1>
         <listaCarrinho>
