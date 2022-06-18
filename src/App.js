@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import  {Carrinho}  from "./Components/Carrinho/Carrinho";
 import {Product} from "./Components/Produtos/Produtos";
-import {Filter} from "./Components/Filtros/Filtro"
+// import {Filter} from "./Components/Filtros/Filtro"
 import FogueteTurbo from "./img/FogueteTurbo.jpg"
 import FogueteEpaco from "./img/FogueteEspaco.jpg";
 import FalcaoStar from "./img/FalcaoStar.jpg";
@@ -21,37 +21,37 @@ class App extends Component {
     listaBrinquedos: [
       {
         id: 1,
-        name: "Foguete Turbo",
+        name: "Foguete Turbo ",
         value: 150,
         image: FogueteTurbo,
       },
       {
         id: 1,
-        name: "Foguete espacial",
+        name: "Foguete espacial ",
         value: 350,
         image: FogueteEpaco,
       },
       {
         id: 1,
-        name: "Nave Star wars",
+        name: "Nave Star wars ",
         value: 500,
         image: NaveStarWars,
       },
       {
         id: 1,
-        name: "Falcon Star",
+        name: "Falcon Star ",
         value: 620,
         image: FalcaoStar,
       },
       {
         id: 1,
-        name: "Foguete Aero",
+        name: "Foguete Aero ",
         value: 700,
         image: FogueteAero,
       },
       {
         id: 1,
-        name: "Foguete Unipolar",
+        name: "Foguete Unipolar ",
         value: 750,
         image: FogueteUnipolar,
       },
@@ -59,9 +59,8 @@ class App extends Component {
   }; 
   render() {
     return (
-      <MainContainer>
-       {/* {this.componentsBrinquedos} */}
-        <Filter/>
+      <MainContainer>       
+        {/* <Filter/> */}
         <Product product={this.state.listaBrinquedos}/>
    <Carrinho />
       </MainContainer>
