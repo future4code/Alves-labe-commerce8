@@ -21,7 +21,7 @@ export class Product extends Component {
   render() {
     const componentsBrinquedos = this.props.product
       .sort((a, b) => {
-        if (this.state.ordenar === "DECRESCENTE") {
+        if (this.state.ordenar !== "CRESCENTE") {
           return -1
         } else {
           return true
@@ -50,7 +50,7 @@ export class Product extends Component {
             onChange={this.mudarOrdem}
           >
             <option value="CRESCENTE">Crescente</option>
-            <option value="DECRESCENTE">Descente</option>
+            <option value="DECRESCENTE">Decrescente</option>
           </select>
         </HeaderProduct>
         <SectionProduct>{componentsBrinquedos}</SectionProduct>
