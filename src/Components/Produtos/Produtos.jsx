@@ -32,7 +32,7 @@ export class Product extends Component {
             <PoductDescription>
               {brinquedo.name}
               R${brinquedo.value}
-              <button onClick={this.props.onClick}>Adicionar ao carrinho</button>
+              <button onClick={this.props.adicionarAoCarrinho}>Adicionar ao carrinho</button>
             </PoductDescription>
           </CadaProduto>
         );
