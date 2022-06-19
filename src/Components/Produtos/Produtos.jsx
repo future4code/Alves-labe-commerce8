@@ -40,7 +40,7 @@ export class Product extends Component {
     return (
       <MainProduct>
         <HeaderProduct>
-          <p>Quantidade de produtos:</p>
+          <p>{`Quantidade de Produtos: ${componentsBrinquedos.length}`}</p>
           <label for="sort">Ordenação:</label>
           <select
             name="sort"
