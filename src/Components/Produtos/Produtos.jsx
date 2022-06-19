@@ -32,15 +32,15 @@ export class Product extends Component {
             <PoductDescription>
               {brinquedo.name}
               R${brinquedo.value}
-              <button onClick={this.props.onClick}>Adicionar ao carrinho</button>
-            </PoductDescription>
+              <button onClick={this.props.adicionarAoCarrinho}>Adicionar ao carrinho</button>
+            </PoductDescription> 
           </CadaProduto>
         );
       });
     return (
       <MainProduct>
-        <HeaderProduct>
-          <p>Quantidade de produtos:</p>
+        <HeaderProduct>          
+          <p>{`Quantidade de Produtos: ${componentsBrinquedos.length}`}</p>
           <label for="sort">Ordenação:</label>
           <select
             name="sort"
